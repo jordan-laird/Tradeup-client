@@ -54,7 +54,7 @@ class _NavBar extends React.Component {
               <Icon name="chart line " size="big" /> TradeUp
             </Menu.Item>
             {/* <Menu.Item as="a">Home </Menu.Item> */}
-            {localStorage.getItem('token') ? <Menu.Item as="a" onClick={() => this.goTo(`/companies`)}>
+            {localStorage.getItem('token') ? <Menu.Item as="a" onClick={() => this.goTo(`/home`)}>
               Home
             </Menu.Item> : null}
             {localStorage.getItem('token') ? <Menu.Item as="a" onClick={() => this.goTo(`/portfolio`)}>
