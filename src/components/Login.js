@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Form, Segment, Grid, Header, Message } from "semantic-ui-react";
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 
-export class Login extends React.Component {
+export class _Login extends React.Component {
   login = e => {
     e.preventDefault();
     fetch("https://tradeup-api.herokuapp.com/api/v1/auth/", {
@@ -94,3 +94,5 @@ export class Login extends React.Component {
     );
   }
 }
+
+export const Login = withRouter(_Login)
