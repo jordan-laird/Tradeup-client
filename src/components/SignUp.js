@@ -5,7 +5,7 @@ import { Button, Form, Message, Segment, Grid, Header } from "semantic-ui-react"
 export class SignUp extends Component {
   signUpClickHandler = e => {
     e.persist();
-    fetch("http://localhost:3000/api/v1/users", {
+    fetch("https://tradeup-api.herokuapp.com/api/v1/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

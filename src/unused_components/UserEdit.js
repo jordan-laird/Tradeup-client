@@ -9,7 +9,7 @@ export class UserEdit extends React.Component {
     e.preventDefault();
     let { firstNameInput, lastNameInput, emailInput } = e.target;
     let userID = this.props.match.params.id;
-    fetch(`http://localhost:3000/api/v1/users/${userID}`, {
+    fetch(`https://tradeup-api.herokuapp.com/api/v1/users/${userID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ export class UserEdit extends React.Component {
   componentDidMount() {
     let userID = this.props.match.params.id;
 
-    fetch(`http://localhost:3000/api/v1/users/${userID}`)
+    fetch(`https://tradeup-api.herokuapp.com/api/v1/users/${userID}`)
       .then(res => res.json())
       .then(user => this.setState({ user }));
   }
