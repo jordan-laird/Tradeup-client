@@ -21,7 +21,7 @@ class _SignUp extends Component {
       })
     }).then(() => {
       alert("Your account has been created!");
-      this.props.history.push("/home");
+      this.props.history.push("/");
     });
   };
   render() {
