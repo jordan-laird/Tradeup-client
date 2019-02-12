@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Button, Form, Message, Segment, Grid, Header } from "semantic-ui-react";
 
-export class SignUp extends Component {
+class _SignUp extends Component {
   signUpClickHandler = e => {
     e.persist();
     fetch("https://tradeup-api.herokuapp.com/api/v1/users", {
@@ -100,3 +100,5 @@ export class SignUp extends Component {
     );
   }
 }
+
+export const SignUp = withRouter(_SignUp)
