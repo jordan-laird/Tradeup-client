@@ -21,7 +21,7 @@ export class Login extends React.Component {
         console.log(result)
         localStorage.setItem("token", result.token);
         localStorage.setItem("userID", result.user.id);
-        this.goTo("/companies");
+        this.goTo("/home");
         ;
       });
   };
